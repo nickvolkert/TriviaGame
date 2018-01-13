@@ -1,6 +1,6 @@
 $(document).ready(function(){
 //Countdown Function
-var gameTime = 5;
+var gameTime = 10;
     
 //Right and Wrong Answer Log
     var rightAnswers = 0;
@@ -13,12 +13,29 @@ var gameTime = 5;
     //console.log("Document Load is working");
     function hideGame(){
         $("#startScreen").show();
-        // $("#gameView").hide();
+        //$("#gameView").hide();
         //$("#results").hide();
         console.log("hide game is working");
     }
     hideGame();
     
+    function radioBuilder() {
+          var usernames = [
+            'test1', 'test2', 'test3', 'test4'
+          ];
+
+          var result = $("#radioBuild");
+            var tabIndexSet = 1;
+          result.html('');
+
+          for (var i = 0; i < usernames.length; i++) {
+            result.append('<label><input type="radio" name="usernames" value="' + usernames[i] + '"tabindex="' + tabIndexSet++ + '" />' + usernames[i] + '</label>');
+        
+//        for (var i = 0; i < usernames.length; i++) {
+//            result.append('<form><fieldset><h3>Question' + questionHeading++ + '<label><input type="radio" name="usernames" value="' + usernames[i] + '"tabindex="' + tabIndexSet++ + '" />' + usernames[i] + '</label></fieldset></form>');
+//              
+          } 
+        }
     
     function gameStart(){
         $("#startScreen a").on("click", function(){
@@ -35,13 +52,14 @@ var gameTime = 5;
         });
     }
 //    function gameEnd(){
-//        
+//        if (gameTime === 0){
 //            $("#startScreen").hide();
 //            $("#gameView").hide();
 //            $("#results").show();
-//            
+//            }
 //    }
     gameStart();
+    radioBuilder();
     //gameEnd();
 });
 //Question Variables for End of Game
