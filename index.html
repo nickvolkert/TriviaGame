@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Trivia Game</title>
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+      <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+      <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Arvo|Fjalla+One" rel="stylesheet">
   </head>
   <body>
     <div id="triviaGame">
@@ -14,47 +16,48 @@
             </div>
         </div>
         <div id="gameView">
-            <div id="timeRemaining"><span id="ticker"></span>Seconds</div>
+            <div id="timeRemaining"><span id="ticker">60</span> Seconds</div>
+            <div id="radioBuild"></div>
             <div id="question01">
                 <form>
                     <fieldset id="group1">
-                        <h3>Question 1</h3>
-                        <input type="radio" value="" name="group1" tabindex="1">Answer 1
-                        <input type="radio" value="" name="group1" tabindex="2">Answer 2
-                        <input type="radio" value="" name="group1" tabindex="3">Answer 3
-                        <input type="radio" value="" name="group1" tabindex="4">Answer 4
+                        <h3>What year did Chris Farley first appear on SNL?</h3>
+                        <input type="radio" value="" name="group1" tabindex="1" id="answer1"><label for="answer1">1988</label>
+                        <input type="radio" value="" name="group1" tabindex="2" id="answer2"><label for="answer2">1989</label>
+                        <input type="radio" value="" name="group1" tabindex="3" id="answer3"><label for="answer3">1990</label>
+                        <input type="radio" value="" name="group1" tabindex="4" id="answer4"><label for="answer1">1991</label>
                     </fieldset>
 
                     <fieldset id="group2">
-                        <h3>Question 2</h3>
-                        <input type="radio" value="" name="group2" tabindex="5">Answer 1
-                        <input type="radio" value="" name="group2" tabindex="6">Answer 2
-                        <input type="radio" value="" name="group2" tabindex="7">Answer 3
-                        <input type="radio" value="" name="group2" tabindex="8">Answer 4
+                        <h3>In Mike Myer's "Sprockets" Skit, Deter always ended the show with:</h3>
+                        <input type="radio" value="" name="group2" tabindex="5" id="answer5"><label for="answer5">Petting the Monkey</label>
+                        <input type="radio" value="" name="group2" tabindex="6" id="answer6"><label for="answer6">Singing</label>
+                        <input type="radio" value="" name="group2" tabindex="7" id="answer7"><label for="answer7">Dancing</label>
+                        <input type="radio" value="" name="group2" tabindex="8" id="answer8"><label for="answer8">It faeds to black</label>
                     </fieldset>
                     
                     <fieldset id="group3">
-                        <h3>Question 3</h3>
-                        <input type="radio" value="" name="group3" tabindex="9">Answer 1
-                        <input type="radio" value="" name="group3" tabindex="10">Answer 2
-                        <input type="radio" value="" name="group3" tabindex="11">Answer 3
-                        <input type="radio" value="" name="group3" tabindex="12">Answer 4
+                        <h3>In Chevy Chase's Weekend News Bit, he'd proclaim "I'm Chevy Chase and ____?</h3>
+                        <input type="radio" value="" name="group3" tabindex="9" id="answer9"><label for="answer9">This is the news</label>
+                        <input type="radio" value="" name="group3" tabindex="10" id="answer10"><label for="answer10">For tonight's top story</label>
+                        <input type="radio" value="" name="group3" tabindex="11" id="answer11"><label for="answer11">Good Evening</label>
+                        <input type="radio" value="" name="group3" tabindex="12" id="answer12"><label for="answer12">You're not.</label>
                     </fieldset>
                     
                     <fieldset id="group4">
-                        <h3>Question 4</h3>
-                        <input type="radio" value="" name="group4" tabindex="13">Answer 1
-                        <input type="radio" value="" name="group4" tabindex="14">Answer 2
-                        <input type="radio" value="" name="group4" tabindex="15">Answer 3
-                        <input type="radio" value="" name="group4" tabindex="16">Answer 4
+                        <h3>On "Wayne's World", Wayne's sidekick is named _____?"</h3>
+                        <input type="radio" value="" name="group4" tabindex="13" id="answer13"><label for="answer13">Garth</label>
+                        <input type="radio" value="" name="group4" tabindex="14" id="answer14"><label for="answer14">Olaf</label>
+                        <input type="radio" value="" name="group4" tabindex="15" id="answer15"><label for="answer15">Bart</label>
+                        <input type="radio" value="" name="group4" tabindex="16" id="answer16"><label for="answer16">Gus</label>
                     </fieldset>
                     
                     <fieldset id="group5">
-                        <h3>Question 5</h3>
-                        <input type="radio" value="" name="group5" tabindex="17">Answer 1
-                        <input type="radio" value="" name="group5" tabindex="18">Answer 2
-                        <input type="radio" value="" name="group5" tabindex="19">Answer 3
-                        <input type="radio" value="" name="group5" tabindex="20">Answer 4
+                        <h3>Chris Farley's Matt Foley character always threatened that "You'll be living in a ____?"</h3>
+                        <input type="radio" value="" name="group5" tabindex="17" id="answer17"><label for="answer17">Shack in the Timbers</label>
+                        <input type="radio" value="" name="group5" tabindex="18" id="answer18"><label for="answer18">Shelter in the Woods</label>
+                        <input type="radio" value="" name="group5" tabindex="19" id="answer19"><label for="answer19">Van Down by the River</label>
+                        <input type="radio" value="" name="group5" tabindex="20" id="answer20"><label for="answer20">Truck by the Swamp</label>
                     </fieldset>
                 </form>
             </div>

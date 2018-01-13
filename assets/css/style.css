@@ -1,16 +1,61 @@
-#triviaGame{}
-h1{}
-#startScreen{}
-#startContainer.gameContainer{}
-#startContainer.gameContainer a{}
-#gameView{}
-#timeRemaining{}
-#ticker{}
-#question01{}
-#question01 form{}
-#question01 form fieldset{}
-h3{}
-#question01 form fieldset input{}
-#results{}
-h2{}
-#results p{}
+body{
+    font-family: 'Arvo', serif;
+    font-size: 14px;
+    background-color: #aaa;
+}
+#triviaGame{
+    width:990px;
+    margin: 20px auto 0 auto;
+    border-radius: 15px;
+    background-color: #FFF;
+}
+h1{
+    font-family: 'Fjalla One', sans-serif;
+    text-align: center;
+    font-size: 22px;
+}
+#startScreen{
+    width:800px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+#startContainer.gameContainer{
+    
+}
+#startContainer.gameContainer a{
+    
+}
+#gameView{
+    
+}
+#timeRemaining{
+    
+}
+#ticker{
+    
+}
+#question01{
+    
+}
+#question01 form{
+    
+}
+#question01 form fieldset{
+    
+}
+h3{
+    
+}
+#question01 form fieldset input{
+    
+}
+#results{
+    
+}
+h2{
+    
+}
+#results p{
+    
+}

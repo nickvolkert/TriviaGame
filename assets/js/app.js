@@ -1,12 +1,7 @@
 $(document).ready(function(){
 //Countdown Function
-var gameTime = 60;
-function decrement(){
-    gameTime--;
-}
-function run(){
-    gameTime = setInterval(decrement, 1000);
-}
+var gameTime = 5;
+    
 //Right and Wrong Answer Log
     var rightAnswers = 0;
     var wrongAnswers = 0;
@@ -18,23 +13,36 @@ function run(){
     //console.log("Document Load is working");
     function hideGame(){
         $("#startScreen").show();
-        $("#gameView").hide();
-        $("#results").hide();
+        // $("#gameView").hide();
+        //$("#results").hide();
         console.log("hide game is working");
-    };
+    }
     hideGame();
-    function gameStart(run){
+    
+    
+    function gameStart(){
         $("#startScreen a").on("click", function(){
             $("#startScreen").hide();
             $("#gameView").show();
             $("#results").hide();
             console.log("Button Click is working");
            
-            $("#ticker").html(gameTime);
-           
-        }
-    )};
+            
+            setInterval( function() {
+              $("#ticker").html(gameTime--);
+            }, 1000);
+            
+        });
+    }
+//    function gameEnd(){
+//        
+//            $("#startScreen").hide();
+//            $("#gameView").hide();
+//            $("#results").show();
+//            
+//    }
     gameStart();
+    //gameEnd();
 });
 //Question Variables for End of Game
 
