@@ -2,60 +2,120 @@ body{
     font-family: 'Arvo', serif;
     font-size: 14px;
     background-color: #aaa;
+    color:dimgray;
 }
 #triviaGame{
-    width:990px;
-    margin: 20px auto 0 auto;
+    width:800px;
+    margin: 40px auto 0 auto;
     border-radius: 15px;
     background-color: #FFF;
 }
-h1{
-    font-family: 'Fjalla One', sans-serif;
-    text-align: center;
-    font-size: 22px;
+h1,
+#results h2{
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  font-size: 58px;
+  line-height: 60px;
+  margin: 30px 0;
+}
+h2{
+
+}
+h3{
+  text-align: center;
 }
 #startScreen{
     width:800px;
-    height: 400px;
+    height: 300px;
     margin: 0 auto;
+    padding: 30px 0 0 0;
     text-align: center;
 }
 #startContainer.gameContainer{
-    
+
 }
-#startContainer.gameContainer a{
-    
+#startContainer.gameContainer a,
+#tryAgain{
+  width: 200px;
+  height: 42px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+  font-size: 20px;
+  text-decoration: none;
+  color: #FFF;
+  background-color: coral;
+}
+#startContainer.gameContainer a:hover,
+#tryAgain:hover{
+  background-color:cornflowerblue;
 }
 #gameView{
-    
+  padding:20px 0 10px 0;
+  display: none;
+}
+fieldset{
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 760px;
+  margin: 0 auto 20px auto;
 }
 #timeRemaining{
-    
-}
-#ticker{
-    
-}
-#question01{
-    
-}
-#question01 form{
-    
-}
-#question01 form fieldset{
-    
-}
-h3{
-    
-}
-#question01 form fieldset input{
-    
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 20px;
 }
 #results{
-    
+  text-align: center;
+  padding:40px 0;
+  display: none;
 }
-h2{
-    
+/*Animated Gifs*/
+.correctAnswer,
+.incorrectAnswer{
+  width:300px;
+  height: 300px;
+  display: none;
+  margin:0 auto;
 }
-#results p{
-    
+.gif{
+  width:400px;
+  height: 300px;
+  margin:0 auto;
+  display: block;;
+}
+#group1 .correctAnswer .gif{
+  background:url(https://media1.giphy.com/media/G5Hldst24z1jW/giphy.gif) center top no-repeat;
+}
+#group1 .incorrectAnswer .gif{
+  background:url(https://media3.giphy.com/media/voJJQAHaLq21q/giphy.gif) center top no-repeat;
+}
+/*Sprockets*/
+#group2 .correctAnswer .gif{
+  background:url(https://media.giphy.com/media/3ShY14S0XDhQI/giphy.gif) center top no-repeat;
+}
+#group2 .incorrectAnswer .gif{
+  background:url(https://thumbs.gfycat.com/AlertIckyBison-max-1mb.gif) center top no-repeat;
+}
+/*Chevy Chase*/
+#group3 .correctAnswer .gif{
+  background:url(https://media.giphy.com/media/jxY0QXUlzpI4g/giphy.gif) center top no-repeat;
+}
+#group3 .incorrectAnswer .gif{
+  background:url(https://media.giphy.com/media/agbX4iuGw1Ed2/giphy.gif) center top no-repeat;
+}
+/*Wayne's World*/
+#group4 .correctAnswer .gif{
+  background:url(https://78.media.tumblr.com/2bd6df8e9c0838719e4aa49012262a94/tumblr_okfcrf72q71u501aoo1_400.gif) center top no-repeat;
+}
+#group4 .incorrectAnswer .gif{
+  background:url(https://media.giphy.com/media/14eLt7koMxUA0w/giphy.gif) center top no-repeat;
+}
+/*Matt Foley*/
+#group5 .correctAnswer .gif{
+  background:url(https://media.giphy.com/media/DpptvabS898zK/giphy.gif) center top no-repeat;
+}
+#group5 .incorrectAnswer .gif{
+  background:url(http://24.media.tumblr.com/038f5a74c920bafd0b7b4df2a787c94c/tumblr_mqkdiralk31qiqvoeo1_400.gif) center top no-repeat;
 }
