@@ -1,5 +1,4 @@
 // JavaScript Document
-
 //game start
 function hideGame(){
     $("#startScreen").show();
@@ -46,24 +45,26 @@ var tabIndexSet = 1;
 //builds the answer radio buttons
 var radioQuestion = gameArray[number].question;
 //builds the answer radio buttons
-var questionListing = gameArray[number].answers;
-
-
+//var questionListing = gameArray[j].answers;
+for (var j = 0; j < gameArray.length; j++) {
+  radioBuilder(j);
+}
 function radioBuilder() {
   //console.log(gameArray[0].question);
   //console.log(gameArray[0].answers);
   //builds the question and radios in this div
-  var result = $("#question01", "#question02");
+  //var result = $("#gameView");
   //sets tab index for radio buttons
   //builds the for loop inside html
-  result.html('');
+  var result = $('<div>');
+  //result.html('');
   //for loop
-  result.append('<h3>' + gameArray[number].question + '</h3>');
-  for (var i = 0; i < questionListing.length; i++) {
-    result.append('<label><input type="radio" name="usernames" value="' + questionListing[i] + '"tabindex="' + tabIndexSet++ + '" />' + questionListing[i] + '</label>');
+  result.append('<h3>' + gameArray[j].question + '</h3>');
+  for (var i = 0; i < gameArray[j].answers.length; i++) {
+    result.append('<label><input type="radio" name="usernames" value="' + gameArray[j].answers[i] + '"tabindex="' + tabIndexSet++ + '" />' + gameArray[j].answers[i] + '</label>');
     console.log("question builder is working");
     }
     result.append('<div class="correctAnswer"></div>');
     result.append('<div class="correctAnswer"></div>');
+    result.appendTo("#gameView");
 }
-radioBuilder();
