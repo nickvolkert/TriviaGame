@@ -6,29 +6,40 @@ body{
 }
 #triviaGame{
     width:800px;
-    margin: 40px auto 0 auto;
+    margin: 40px auto;
     border-radius: 15px;
     background-color: #FFF;
 }
-h1,
-#results h2{
+h1{
   font-family: 'Fjalla One', sans-serif;
   text-align: center;
   font-size: 58px;
   line-height: 60px;
-  margin: 30px 0;
+  padding: 30px 0;
+}
+#results h2{
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  font-size: 48px;
+  line-height: 60px;
+  padding: 0 0 30px 0;
 }
 h2{
   font-size: 18px;
-  padding: 0 0 10px 0;
+  padding: 0 0 18px 0;
   font-weight: bold;
 }
 h3{
   text-align: center;
+  font-size:24px;
+  margin-bottom: 10px;
+}
+p{
+  padding-bottom:10px;
 }
 #startScreen{
     width:800px;
-    height: 300px;
+    height: 180px;
     margin: 0 auto;
     padding: 30px 0 0 0;
     text-align: center;
@@ -42,7 +53,7 @@ h3{
   height: 42px;
   text-align: center;
   display: block;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
   padding: 20px 0 0 0;
   font-size: 20px;
   text-decoration: none;
@@ -64,6 +75,16 @@ fieldset{
   margin: 0 auto 20px auto;
   padding: 20px;
 }
+label{
+  padding-right:15px;
+}
+input{
+  margin-right:8px;
+  padding: 5px;
+}
+label,input{
+  cursor: pointer;
+}
 #timeRemaining{
   text-align: center;
   font-size: 40px;
@@ -77,48 +98,63 @@ fieldset{
 /*Animated Gifs*/
 .correctAnswer,
 .incorrectAnswer{
-  width:300px;
-  height: 300px;
+  width:100%;
+  height: 450px;
   display: none;
-  margin:0 auto;
+  margin-top:20px;
+}
+.correctAnswer h3{
+  color:green;
+}
+.incorrectAnswer h3{
+  color:red;
 }
 .gif{
-  width:400px;
-  height: 300px;
-  margin:0 auto;
-  display: block;;
+  width:100%;
+  height: 415px;
+  display: block;
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: 50%;
 }
 #group0 .correctAnswer .gif{
-  background:url(https://media1.giphy.com/media/G5Hldst24z1jW/giphy.gif) center top no-repeat;
+  background-image:url(https://media.giphy.com/media/dvfxNv1bLKifS/giphy.gif);
 }
 #group0 .incorrectAnswer .gif{
-  background:url(https://media3.giphy.com/media/voJJQAHaLq21q/giphy.gif) center top no-repeat;
+  background-image:url(https://media3.giphy.com/media/voJJQAHaLq21q/giphy.gif);
 }
 /*Sprockets*/
 #group1 .correctAnswer .gif{
-  background:url(https://media.giphy.com/media/3ShY14S0XDhQI/giphy.gif) center top no-repeat;
+  background-image:url(https://media.giphy.com/media/3ShY14S0XDhQI/giphy.gif);
 }
 #group1 .incorrectAnswer .gif{
-  background:url(https://thumbs.gfycat.com/AlertIckyBison-max-1mb.gif) center top no-repeat;
+  background-image:url(https://thumbs.gfycat.com/AlertIckyBison-max-1mb.gif);
 }
 /*Chevy Chase*/
 #group2 .correctAnswer .gif{
-  background:url(https://media.giphy.com/media/jxY0QXUlzpI4g/giphy.gif) center top no-repeat;
+  background-image:url(https://media.giphy.com/media/jxY0QXUlzpI4g/giphy.gif);
 }
 #group2 .incorrectAnswer .gif{
-  background:url(https://media.giphy.com/media/agbX4iuGw1Ed2/giphy.gif) center top no-repeat;
+  background-image:url(https://media.giphy.com/media/agbX4iuGw1Ed2/giphy.gif);
 }
 /*Wayne's World*/
 #group3 .correctAnswer .gif{
-  background:url(https://78.media.tumblr.com/2bd6df8e9c0838719e4aa49012262a94/tumblr_okfcrf72q71u501aoo1_400.gif) center top no-repeat;
+  background-image:url(https://78.media.tumblr.com/2bd6df8e9c0838719e4aa49012262a94/tumblr_okfcrf72q71u501aoo1_400.gif);
 }
 #group3 .incorrectAnswer .gif{
-  background:url(https://media.giphy.com/media/14eLt7koMxUA0w/giphy.gif) center top no-repeat;
+  background-image:url(https://media.giphy.com/media/14eLt7koMxUA0w/giphy.gif);
 }
 /*Matt Foley*/
 #group4 .correctAnswer .gif{
-  background:url(https://media.giphy.com/media/DpptvabS898zK/giphy.gif) center top no-repeat;
+  background-image:url(https://media.giphy.com/media/DpptvabS898zK/giphy.gif);
 }
 #group4 .incorrectAnswer .gif{
-  background:url(http://24.media.tumblr.com/038f5a74c920bafd0b7b4df2a787c94c/tumblr_mqkdiralk31qiqvoeo1_400.gif) center top no-repeat;
+  background-image:url(http://24.media.tumblr.com/038f5a74c920bafd0b7b4df2a787c94c/tumblr_mqkdiralk31qiqvoeo1_400.gif);
+}
+/*Simon*/
+#group5 .correctAnswer .gif{
+  background-image:url(https://media.giphy.com/media/13hwBF6E1nntks/source.gif);
+}
+#group5 .incorrectAnswer .gif{
+  background-image:url(https://media.giphy.com/media/4Ya8UtZz4PEuk/giphy.gif);
 }

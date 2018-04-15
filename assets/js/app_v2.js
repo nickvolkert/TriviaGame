@@ -5,6 +5,16 @@ jQuery(function(){
 var triviaGame = (function ($){
 	function init () {
     // JavaScript Document
+    var rightAnswers = 0;
+    var wrongAnswers = 0;
+    var unAnswered = 6;
+    //Score Keeping for Final Screen
+    function scoreBucket(){
+      $("#correctAnswers").text(rightAnswers);
+      $("#incorrectAnswers").text(wrongAnswers);
+      $("#unanswered").text(unAnswered);
+      console.log("score bucket is working");
+    }
     //game start
     var gameArray = [{
       question: "What year did Chris Farley first appear on SNL?",
@@ -48,18 +58,14 @@ var triviaGame = (function ($){
       //for loop
       result.append('<h2>' + gameArray[j].question + '</h2>');
       for (var i = 0; i < gameArray[j].answers.length; i++) {
-        result.append('<input type="radio" value="' + gameArray[j].answers[i] + '"tabindex="' + tabIndexSet++ + '"id="answer' + input++ + '"name="group' + number + 
+        result.append('<input type="radio" value="' + gameArray[j].answers[i] + '"tabindex="' + tabIndexSet++ + '"id="answer' + input++ + '"name="group' + number +
         '"/><label for="answer' + label++ + '">' + gameArray[j].answers[i] + '</label>');
         console.log("question builder is working");
         }
-        result.append('<div class="correctAnswer"><h3>Sorry that&#39;s incorrect</h3><div class="gif"></div></div>');
-        result.append('<div class="incorrectAnswer"><h3>That&#39;s incorrect!</h3><div class="gif"></div></div>');
+        result.append('<div class="correctAnswer"><h3>That&#39;s Correct!</h3><div class="gif"></div></div>');
+        result.append('<div class="incorrectAnswer"><h3>Sorry that&#39;s incorrect</h3><div class="gif"></div></div>');
         result.appendTo("#radioBuild form");
     }
-
-      var rightAnswers = 0;
-      var wrongAnswers = 0;
-      var unAnswered = 6;
 
       function hideGame(){
           $("#startScreen").show();
@@ -74,6 +80,7 @@ var triviaGame = (function ($){
               $("#gameView").show();
               $("#results").hide();
               console.log("Button Click is working");
+              scoreBucket();
             });
       }
       //Uncheck all radios
@@ -94,6 +101,9 @@ var triviaGame = (function ($){
           $("#startScreen").hide();
           $("#gameView").hide();
           $("#results").show();
+          $("#correctAnswers").text("0");
+          $("#incorrectAnswers").text("0");
+          $("#unanswered").text("6");
         }
     	}
       function stop() {
@@ -116,10 +126,16 @@ var triviaGame = (function ($){
       }
       gameStart();
 
+      //Gaveview delay
+      function gameViewDelay(){
+        $("#gameView").delay(5000).hide(0);
+        $("#results").delay(5000).show(0);
+      }
+
       //Radio Click functions
       function gamePlay(){
           clearRadios();
-          //Question01
+          //Group 0 / Question 1 / Chris Farley Question
           $("#group0 input").on("click", function(){
             $(this).addClass("checked");
             console.log("Q1 click is working")
@@ -128,114 +144,133 @@ var triviaGame = (function ($){
               unAnswered--;
               $("#group0 .correctAnswer").show();
               $("#group0 .incorrectAnswer").hide();
-              console.log("Q1 correct answer is working")
-            } else if (!$("input#answer3").hasClass("checked")){
-              unAnswered++;
+            } else if (!$("#answer2").hasClass("checked")){
+              wrongAnswers++;
+              unAnswered--;
               $("#group0 .incorrectAnswer").show();
-              console.log("Q1 INCORRECT answer is working")
             } else {
               wrongAnswers++;
+              unAnswered--;
               $("#group0 .incorrectAnswer").show();
               $("#group0 .correctAnswer").hide();
             }
           });
 
-          //Question02
+          //Group 1 / Question02 / Sprockets
           $("#group1 input").on("click", function(){
             $(this).addClass("checked");
-            if ($("input#answer7").hasClass("checked")){
+            if ($("#answer6").hasClass("checked")){
               rightAnswers++;
               unAnswered--;
               $("#group1 .correctAnswer").show();
               $("#group1 .incorrectAnswer").hide();
-            } else if (!$("input#answer3").hasClass("checked")){
-              unAnswered++;
-
+            } else if (!$("#answer6").hasClass("checked")){
+              wrongAnswers++;
+              unAnswered--;
               $("#group1 .incorrectAnswer").show();
             } else {
               wrongAnswers++;
+              unAnswered--;
               $("#group1 .incorrectAnswer").show();
               $("#group1 .correctAnswer").hide();
             }
           });
 
-          //Question03
+          //Group 2 / Question03 / Weekend Update
           $("#group2 input").on("click", function(){
             $(this).addClass("checked");
-            if ($("input#answer12").hasClass("checked")){
+            if ($("#answer11").hasClass("checked")){
               rightAnswers++;
               unAnswered--;
               $("#group2 .correctAnswer").show();
               $("#group2 .incorrectAnswer").hide();
-            } else if (!$("input#answer3").hasClass("checked")){
-              unAnswered++;
-
+            } else if (!$("#answer11").hasClass("checked")){
+              wrongAnswers++;
+              unAnswered--;
               $("#group2 .incorrectAnswer").show();
             } else {
               wrongAnswers++;
+              unAnswered--;
               $("#group2 .incorrectAnswer").show();
               $("#group2 .correctAnswer").hide();
             }
           });
 
-          //Question04
+          //Group 3 / Question04 / Wayne World
           $("#group3 input").on("click", function(){
             $(this).addClass("checked");
-            if ($("input#answer13").hasClass("checked")){
+            if ($("input#answer12").hasClass("checked")){
               rightAnswers++;
               unAnswered--;
               $("#group3 .correctAnswer").show();
               $("#group3 .incorrectAnswer").hide();
-            } else if (!$("input#answer3").hasClass("checked")){
-              unAnswered++;
+            } else if (!$("input#answer12").hasClass("checked")){
+              wrongAnswers++;
+              unAnswered--;
               $("#group3 .incorrectAnswer").show();
             } else {
               wrongAnswers++;
+              unAnswered--;
               $("#group3 .incorrectAnswer").show();
               $("#group3 .correctAnswer").hide();
             }
           });
 
-          //Question05
+          //Group4 / Question05 / Matt Foley
           $("#group4 input").on("click", function(){
             $(this).addClass("checked");
-            if ($("input#answer19").hasClass("checked")){
+            if ($("#answer18").hasClass("checked")){
               rightAnswers++;
               unAnswered--;
               $("#group4 .correctAnswer").show();
               $("#group4 .incorrectAnswer").hide();
-              stop();
-              $("#startScreen").hide();
-              $("#gameView").delay(5000).hide(0);
-              $("#results").delay(5000).show(0);
-            } else if (!$("input#answer3").hasClass("checked")){
-              unAnswered++;
+            } else if (!$("#answer18").hasClass("checked")){
+              wrongAnswers++;
+              unAnswered--;
               $("#group4 .incorrectAnswer").show();
-              stop();
-              $("#startScreen").hide();
-              $("#gameView").delay(5000).hide(0);
-              $("#results").delay(5000).show(0);
             } else {
               wrongAnswers++;
+              unAnswered--;
               $("#group5 .incorrectAnswer").show();
               $("#group5 .correctAnswer").hide();
             }
           });
+
+          //Group5 / Question 6 / Simon
+          $("#group5 input").on("click", function(){
+            $(this).addClass("checked");
+            if ($("#answer20").hasClass("checked")){
+              rightAnswers++;
+              unAnswered--;
+              $("#group5 .correctAnswer").show();
+              $("#group5 .incorrectAnswer").hide();
+              $("#startScreen").hide();
+            } else if (!$("#answer20").hasClass("checked")){
+              wrongAnswers++;
+              unAnswered--;
+              $("#group5 .incorrectAnswer").show();
+              $("#startScreen").hide();
+            } else {
+              wrongAnswers++;
+              unAnswered--;
+              $("#group5 .incorrectAnswer").show();
+              $("#group5 .correctAnswer").hide();
+            }
+            stop();
+            gameViewDelay();
+            scoreBucket();
+          });
+
       }
 
-      //Score Keeping for Final Screen
-      function scoreBucket(){
-        $("#correctAnswers").text(rightAnswers);
-        $("#incorrectAnswers").text(wrongAnswers);
-        $("#unanswered").text(unAnswered);
-        console.log("score bucket is working");
-      }
+
       //Play Game Again
       function reset(){
         $("#tryAgain").on("click", function(){
-          $("#correct").text("0");
-          $("#incorrect").text("0");
-          $("#unanswered").text("6");
+          clearRadios();
+          $("#correctAnswers").text("0");
+          $("#incorrectAnswers").text("0");
+          $("#unanswered").text("0");
           $("#startScreen").show();
           $("#gameView").hide();
           $("#results").hide();
@@ -247,7 +282,6 @@ var triviaGame = (function ($){
 
       }
       gamePlay();
-      scoreBucket();
       reset();
 } return {
        init:init
