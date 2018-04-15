@@ -19,7 +19,9 @@ h1,
   margin: 30px 0;
 }
 h2{
-
+  font-size: 18px;
+  padding: 0 0 10px 0;
+  font-weight: bold;
 }
 h3{
   text-align: center;
@@ -58,8 +60,9 @@ h3{
 fieldset{
   border: 1px solid gray;
   border-radius: 10px;
-  width: 760px;
+  width: 720px;
   margin: 0 auto 20px auto;
+  padding: 20px;
 }
 #timeRemaining{
   text-align: center;
@@ -85,37 +88,37 @@ fieldset{
   margin:0 auto;
   display: block;;
 }
-#group1 .correctAnswer .gif{
+#group0 .correctAnswer .gif{
   background:url(https://media1.giphy.com/media/G5Hldst24z1jW/giphy.gif) center top no-repeat;
 }
-#group1 .incorrectAnswer .gif{
+#group0 .incorrectAnswer .gif{
   background:url(https://media3.giphy.com/media/voJJQAHaLq21q/giphy.gif) center top no-repeat;
 }
 /*Sprockets*/
-#group2 .correctAnswer .gif{
+#group1 .correctAnswer .gif{
   background:url(https://media.giphy.com/media/3ShY14S0XDhQI/giphy.gif) center top no-repeat;
 }
-#group2 .incorrectAnswer .gif{
+#group1 .incorrectAnswer .gif{
   background:url(https://thumbs.gfycat.com/AlertIckyBison-max-1mb.gif) center top no-repeat;
 }
 /*Chevy Chase*/
-#group3 .correctAnswer .gif{
+#group2 .correctAnswer .gif{
   background:url(https://media.giphy.com/media/jxY0QXUlzpI4g/giphy.gif) center top no-repeat;
 }
-#group3 .incorrectAnswer .gif{
+#group2 .incorrectAnswer .gif{
   background:url(https://media.giphy.com/media/agbX4iuGw1Ed2/giphy.gif) center top no-repeat;
 }
 /*Wayne's World*/
-#group4 .correctAnswer .gif{
+#group3 .correctAnswer .gif{
   background:url(https://78.media.tumblr.com/2bd6df8e9c0838719e4aa49012262a94/tumblr_okfcrf72q71u501aoo1_400.gif) center top no-repeat;
 }
-#group4 .incorrectAnswer .gif{
+#group3 .incorrectAnswer .gif{
   background:url(https://media.giphy.com/media/14eLt7koMxUA0w/giphy.gif) center top no-repeat;
 }
 /*Matt Foley*/
-#group5 .correctAnswer .gif{
+#group4 .correctAnswer .gif{
   background:url(https://media.giphy.com/media/DpptvabS898zK/giphy.gif) center top no-repeat;
 }
-#group5 .incorrectAnswer .gif{
+#group4 .incorrectAnswer .gif{
   background:url(http://24.media.tumblr.com/038f5a74c920bafd0b7b4df2a787c94c/tumblr_mqkdiralk31qiqvoeo1_400.gif) center top no-repeat;
 }
